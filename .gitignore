@@ -5,7 +5,6 @@ db.sqlite3
 navedexAPI/__pycache__
 navedexAPI/.env
 
-criador_navedex/migrations
 criador_navedex/__pycache__
 
 criador_navedex/api/__pycache__
