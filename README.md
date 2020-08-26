@@ -1,6 +1,6 @@
 # Introdução
 
-Para a resolução do desafio, utilizei as seguintes tecnologias:
+Tecnologias:
 
 - Python, como linguagem de programação;
 
@@ -58,16 +58,14 @@ python manage.py migrate
 
 ### Django Admin
 
-- Após estas configurações iniciais, o projeto já estará pronto para uso, logo, deve-se criar um super user para o acesso do Django Admin (caso seja necessário):
+- Após estas configurações iniciais, o projeto já estará pronto para uso, logo, deve-se criar um super user para o acesso do Django Admin:
 
 ```bash
 python manage.py createsuperuser
 ```
 
 
-# Pensando no problema
-
-Antes de iniciar qualquer aplicação, eu gosto de resolver o problema primeiro na minha cabeça e 'modelar' o banco fazendo alguns rascunhos e só então iniciar a codificação. Para a resolução do NavedexAPI eu modelei da seguinte forma:
+# Problema
 
 - Herdei o model User do Django Framework para a criação de novos usuários;
 - Criei um model de Naver, que possui uma chave estrangeira para o model de User, sendo assim, um User pode 'ser responsável' por vários Navers, e um Naver sempre vai ter um User vinculado;
@@ -170,21 +168,10 @@ obs: A requisição de DELETE só é permitida para o User responsável pelo Nav
 
 # Testes
 
-- Na raíz do projeto tem-se o arquivo 'automated_tests.py', onde se encontram todos os testes utilizados para verificar a funcionalidade das rotas;
+- Na raíz do projeto tem-se o arquivo 'automated_tests.py', onde se encontram alguns testes utilizados para verificar a funcionalidade das rotas;
 
 
 # Considerações Finais
 
 - Por questões de melhor visualização coloquei um paginator de tamanho 2, que pode ser alterado na variável 'PAGE_SIZE' no arquivo settings.py;
 - Os uploads de fotos para o avatar de um Naver vão para a pasta 'uploads' na raiz do projeto, ou seja, no mesmo nível do arquivo manage.py.
-
-
-## Referências
-[DRF + Vue (Udemy)](https://www.udemy.com/course/the-complete-guide-to-django-rest-framework-and-vue-js)
-
-[DRF + JWT (Youtube)](https://www.youtube.com/watch?v=jEXQqNtjNJc)
-
-[DRF + Signup (Youtube)](https://www.youtube.com/watch?v=2pzqjmNAsxM&list=PLx-q4INfd95GjSD6I6SsmXhm32ZuxWXpk&index=2)
-
-[DRF (Doc)](https://www.django-rest-framework.org/)
-
